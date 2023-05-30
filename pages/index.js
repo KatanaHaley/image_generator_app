@@ -26,10 +26,7 @@ const callGenerateEndpoint = async () => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ userInput }),
-  }).then(response => {
-    if(response.ok) return response.json()
-    return callGenerateEndpoint()
-  })
+  });
 
   const data = await response.json();
   // console.log(data)
